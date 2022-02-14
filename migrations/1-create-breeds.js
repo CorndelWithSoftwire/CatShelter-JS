@@ -35,7 +35,7 @@ module.exports = {
 
     down: async (queryInterface, Sequelize) => {
         // await queryInterface.removeConstraint('cats', 'fk_cats_breeds');
-        await queryInterface.removeColumn('cats', 'breed');
+        await queryInterface.removeColumn('cats', 'breed_id');
         await queryInterface.dropTable('breeds')
     }
 };
