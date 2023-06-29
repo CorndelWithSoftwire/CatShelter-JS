@@ -18,16 +18,16 @@ async function main() {
 
     try {
 
-        const {Cat, Owner} = await createModels(sequelize);
+        const {cat, owner} = await createModels(sequelize);
 
         // Create henrietta and molly in a transaction
         const [henrietta, molly] = await sequelize.transaction(async (t) => {
-            const henrietta = await Owner.create(
+            const henrietta = await owner.create(
                 {name: "Henrietta"},
                 {transaction: t}
             );
 
-            const molly = await Cat.create(
+            const molly = await cat.create(
                 {name: "Molly", age: 0, owner_id: henrietta.id},
                 {transaction: t}
             );

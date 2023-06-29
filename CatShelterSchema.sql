@@ -16,5 +16,5 @@ CREATE TABLE cats (
 	name VARCHAR(255) NULL,
 	age int NULL,
 	owner_id int NOT NULL,
-	FOREIGN KEY FK_Cats_Owner (owner_id) REFERENCES Owners(id)
+	FOREIGN KEY FK_Cats_Owner (owner_id) REFERENCES owners(id)
 );

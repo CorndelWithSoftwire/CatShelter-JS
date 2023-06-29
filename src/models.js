@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
 async function createModels(sequelize) {
-    const Owner = sequelize.define('Owner', {
+    const owner = sequelize.define('owner', {
         id: {
             type: Sequelize.INTEGER,
             primaryKey: true,
@@ -13,7 +13,7 @@ async function createModels(sequelize) {
         }
     });
 
-    const Cat = sequelize.define('Cat', {
+    const cat = sequelize.define('cat', {
         id: {
             type: Sequelize.INTEGER,
             primaryKey: true,
@@ -31,20 +31,20 @@ async function createModels(sequelize) {
             type: Sequelize.INTEGER,
             allowNull: false,
             references: {
-                model: Owner,
+                model: owner,
                 key: "id"
             }
         }
     });
 
-    Owner.Cat = Owner.hasMany(Cat);
-    Cat.Owner = Cat.belongsTo(Owner);
+    owner.cat = owner.hasMany(cat);
+    cat.owner = cat.belongsTo(owner);
 
     await sequelize.sync();
 
     return {
-        Owner,
-        Cat
+        owner,
+        cat
     };
 }
 

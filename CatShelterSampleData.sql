@@ -8,8 +8,8 @@ INSERT INTO owners(name) VALUES ('Jane');
 
 -- Create some cats
 
-INSERT INTO Cats(name, age, owner_id) VALUES ('Tiddles', 2, 1);
-INSERT INTO Cats(name, age, owner_id) VALUES ('Bunnikins', 4, 2);
-INSERT INTO Cats(name, age, owner_id) VALUES ('Mr Scruff', 5, 3);
-INSERT INTO Cats(name, age, owner_id) VALUES ('Mrs Scruff', 1, 3);
-INSERT INTO Cats(name, age, owner_id) VALUES ('Old Faithful', 8, 2);
+INSERT INTO cats(name, age, owner_id) VALUES ('Tiddles', 2, 1);
+INSERT INTO cats(name, age, owner_id) VALUES ('Bunnikins', 4, 2);
+INSERT INTO cats(name, age, owner_id) VALUES ('Mr Scruff', 5, 3);
+INSERT INTO cats(name, age, owner_id) VALUES ('Mrs Scruff', 1, 3);
+INSERT INTO cats(name, age, owner_id) VALUES ('Old Faithful', 8, 2);

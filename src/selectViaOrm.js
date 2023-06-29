@@ -18,13 +18,13 @@ async function main() {
     });
 
     try {
-        const {Cat, Owner} = await createModels(sequelize);
+        const {cat, owner} = await createModels(sequelize);
 
-        const cats = await Cat.findAll({include: [Owner]});
+        const cats = await cat.findAll({include: [owner]});
 
         console.log("Cats: ");
         printTable(["Name", "Age", "Owner Name"],
-            cats.map(cat => [cat.name, cat.age, cat.Owner.name])
+            cats.map(cat => [cat.name, cat.age, cat.owner.name])
         );
     } finally {
         sequelize.close();
